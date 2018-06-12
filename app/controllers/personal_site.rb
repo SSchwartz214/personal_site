@@ -2,7 +2,6 @@ require 'rack'
 
 class PersonalSite
   def self.call(env)
-    # This array includes the HTTP response status code, HTTP response headers & HTTP body
-    ['200', {'Content-Type' => 'text/html'}, ['Welcome!']]
+    ['200', {'Content-Type' => 'text/html'}, [File.read('./app/views/index.html')]]
   end
 end
